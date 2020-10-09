@@ -3,7 +3,7 @@ import React from 'react'
 
 function Button (props) {
   return (
-  <button className={props.className} variant = {props.variant}>Default</button>
+  <button className={props.className} variant ={props.variant}>{props.text}</button>
   )
 }
 export default Button

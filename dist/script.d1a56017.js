@@ -28301,7 +28301,7 @@ function Button(props) {
   return /*#__PURE__*/_react.default.createElement("button", {
     className: props.className,
     variant: props.variant
-  }, "Default");
+  }, props.text);
 }
 
 var _default = Button;
@@ -28398,27 +28398,76 @@ function App() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "typeOfbutton"
   }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "default"
+    className: "default",
+    text: "Default"
   }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "hover-focus"
+    className: "hover",
+    text: "Default"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
     className: "outline",
-    variant: "outline"
+    variant: "outline",
+    text: "Default"
   }), /*#__PURE__*/_react.default.createElement(_button.default, {
     className: "outline outline-hover",
-    variant: ""
+    variant: "",
+    text: "Default"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
     className: "outline variant-text",
-    variant: "text"
+    variant: "text",
+    text: "Default"
   }), /*#__PURE__*/_react.default.createElement(_button.default, {
     className: "outline-hover hover-focus",
-    variant: ""
+    variant: "",
+    text: "Default"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "disableShadow",
+    variant: "",
+    text: "Default"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "disable-border",
+    text: "Disable"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "disable-background",
+    text: "Disable"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "startIcon",
+    text: "Default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "endIcon",
+    text: "Default"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm",
+    text: "Default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm md",
+    text: "Default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm lg",
+    text: "Default"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
     className: "",
-    variant: ""
+    text: "Default"
   }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: " sm md",
+    text: "Default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm secondary",
+    text: "Secondary"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm md danger",
+    text: "Danger"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
     className: "",
-    variant: ""
+    text: "Default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: " sm md",
+    text: "Default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm secondary",
+    text: "Secondary"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "sm md danger",
+    text: "Danger"
   })));
 }
 
@@ -28464,7 +28513,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52258" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57399" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
