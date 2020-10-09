@@ -28298,10 +28298,28 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Button(props) {
+  var buttonStyle = '';
+
+  if (props.color) {
+    buttonStyle = "".concat(props.color, " ");
+  } else if (props.variant) {
+    buttonStyle = "".concat(props.variant);
+  } else if (props.size) {
+    buttonStyle = "".concat(props.size);
+  } else {
+    console.log('no style');
+  }
+
+  var condition = true;
+
+  if (condition) {
+    return props.disabled;
+  }
+
   return /*#__PURE__*/_react.default.createElement("button", {
-    className: props.className,
+    className: buttonStyle,
     variant: props.variant
-  }, props.text);
+  }, props.children);
 }
 
 var _default = Button;
@@ -28397,78 +28415,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "typeOfbutton"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "default",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "hover",
-    text: "Default"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "outline",
-    variant: "outline",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "outline outline-hover",
-    variant: "",
-    text: "Default"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "outline variant-text",
-    variant: "text",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "outline-hover hover-focus",
-    variant: "",
-    text: "Default"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "disableShadow",
-    variant: "",
-    text: "Default"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "disable-border",
-    text: "Disable"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "disable-background",
-    text: "Disable"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "startIcon",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "endIcon",
-    text: "Default"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm md",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm lg",
-    text: "Default"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: " sm md",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm secondary",
-    text: "Secondary"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm md danger",
-    text: "Danger"
-  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: " sm md",
-    text: "Default"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm secondary",
-    text: "Secondary"
-  }), /*#__PURE__*/_react.default.createElement(_button.default, {
-    className: "sm md danger",
-    text: "Danger"
-  })));
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    variant: "outline"
+  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    variant: "text"
+  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    disableShadow: true
+  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null, "Disable"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    disabled: true
+  }, "Disable")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    startIcon: ""
+  }, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    endIcon: ""
+  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    size: "sm"
+  }, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    size: "md"
+  }, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    size: "lg"
+  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    color: "primary"
+  }, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    color: "secondary"
+  }, "Secondary"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    color: "danger"
+  }, "Danger")));
 }
 
 var _default = App;

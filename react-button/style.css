@@ -4,14 +4,10 @@
    height: 36px;
    margin-bottom: 2rem;
    border-radius: 6px;
-   font-size: 14px
+   font-size: 14px;
+   border: none;
  }
  .default {
- 
- }
- .hover:hover {
-     background-color: darkgray;
-     border: none;
 
  }
  .outline {
@@ -19,23 +15,16 @@
    color :#3D5AFE;
    background-color: white;
  }
- .outline-hover:hover {
-     background-color:rgba(41, 98, 255, 0.1);
- }
- .hover-focus:hover{
-   border: none;
+ .text {
    color: #3D5AFE;
+   background-color: white;
  }
- .variant-text {
-   border: none;
- }
- .disable-border {
+ .disable {
    background-color:rgba(224, 224, 224, 1);
    color :grey;
-   border: none;
-   
+    
  }
- .disable-background {
+ .disable {
    color : rgba(158, 158, 158, 1);
    background-color: white;
    border: none;
@@ -53,18 +42,29 @@
   height: 32px;
  } 
  .md {
+  background: rgba(41, 98, 255, 1);
+  color: white;
+  border: none;
   width: 81px;
   height: 36px;
  }
  .lg {
+  background: rgba(41, 98, 255, 1);
+  color: white;
+  border: none;
   width: 93px;
   height: 42px;
+  color: white;
  }
  .secondary {
   background: rgba(69, 90, 100, 1);
   width : 104px;
   height: 36px;
+  color: white;
  }
+
  .danger {
   background: rgba(211, 47, 47, 1);
+  color: white;
  }
+
