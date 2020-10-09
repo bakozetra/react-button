@@ -3,6 +3,36 @@
   flex-direction: row;
   justify-content: space-between;
 } */
+ button {
+   margin-left: 100px;
+   width : 88px;
+   height: 36px;
+   margin-bottom: 2rem;
+   border-radius: 6px;
+   font-size: 14px
+ }
+ .default {
+ 
+ }
+ .hover-focus:hover {
+     background-color: darkgray;
+     border: none;
 
+ }
+ .outline {
+   border:#3D5AFE 1px solid;
+   color :#3D5AFE;
+   background-color: white;
+ }
+ .outline-hover:hover {
+     background-color:rgba(41, 98, 255, 0.1);
+     ;
+ }
+ .hover-focus:hover{
+   border: none;
+ }
+ .variant-text {
+   border: none;
+ }
 
 /*# sourceMappingURL=/script.d1a56017.css.map */

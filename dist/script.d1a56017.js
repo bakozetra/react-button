@@ -28297,8 +28297,11 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Button() {
-  return /*#__PURE__*/_react.default.createElement("button", null, "Default");
+function Button(props) {
+  return /*#__PURE__*/_react.default.createElement("button", {
+    className: props.className,
+    variant: props.variant
+  }, "Default");
 }
 
 var _default = Button;
@@ -28394,7 +28397,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "typeOfbutton"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null), /*#__PURE__*/_react.default.createElement(_button.default, null)));
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "default"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "hover-focus"
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "outline",
+    variant: "outline"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "outline outline-hover",
+    variant: ""
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "outline variant-text",
+    variant: "text"
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "outline-hover hover-focus",
+    variant: ""
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "",
+    variant: ""
+  }), /*#__PURE__*/_react.default.createElement(_button.default, {
+    className: "",
+    variant: ""
+  })));
 }
 
 var _default = App;
@@ -28439,7 +28464,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50506" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52258" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

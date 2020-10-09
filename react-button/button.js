@@ -1,11 +1,9 @@
 import React from 'react'
 
 
-function Button () {
+function Button (props) {
   return (
-    <button>
-      Default
-    </button>
+  <button className={props.className} variant = {props.variant}>Default</button>
   )
 }
 export default Button

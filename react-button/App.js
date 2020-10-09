@@ -6,49 +6,20 @@ function App () {
   return (
   <div className ="typeOfbutton">
     <div>
-      <Button/>
-      <Button/>
+      <Button className = 'default'/>
+      <Button className ='hover-focus'/>
     </div>
     <div>
-      <Button/>
-      <Button/>
+      <Button className ='outline'variant="outline"/>
+      <Button className = 'outline outline-hover' variant ='' />
     </div>
     <div>
-      <Button/>
-      <Button/>
+      <Button className = 'outline variant-text' variant ='text' />
+      <Button className = 'outline-hover hover-focus' variant =''/>
     </div>
     <div>
-      <Button/>
-      <Button/>
-    </div>
-    <div>
-      <Button/>
-      <Button/>
-    </div>
-    <div>
-      <Button/>
-      <Button/>
-    </div>
-    <div>
-      <Button/>
-      <Button/>
-    </div>
-    <div>
-      <Button/>
-      <Button/>
-      <Button/>
-    </div>
-    <div>
-      <Button/>
-      <Button/>
-      <Button/>
-      <Button/>
-    </div>
-    <div>
-      <Button/>
-      <Button/>
-      <Button/>
-      <Button/>
+      <Button className = '' variant ='' />
+      <Button className = '' variant =''/>
     </div>
   </div>
   )
