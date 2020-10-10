@@ -28301,19 +28301,23 @@ function Button(props) {
   var buttonStyle = '';
 
   if (props.color) {
-    buttonStyle = "".concat(props.color, " ");
+    buttonStyle = "".concat(props.color);
+  } else if (props.variant && props.disabled) {
+    buttonStyle = "".concat(props.variant, " ").concat(props.disabled);
+  } else if (props.disableShadow == true) {
+    buttonStyle = 'disableShadow';
+  } else if (props.startIcon) {
+    buttonStyle = 'startIcon';
+  } else if (props.endIcon) {
+    buttonStyle = 'endIcon';
   } else if (props.variant) {
     buttonStyle = "".concat(props.variant);
   } else if (props.size) {
     buttonStyle = "".concat(props.size);
+  } else if (props.disabled) {
+    buttonStyle = "".concat(props.disabled);
   } else {
     console.log('no style');
-  }
-
-  var condition = true;
-
-  if (condition) {
-    return props.disabled;
   }
 
   return /*#__PURE__*/_react.default.createElement("button", {
@@ -28396,7 +28400,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"react-button/App.js":[function(require,module,exports) {
+},{"./..\\assets\\local-grocery-store.svg":[["local-grocery-store.a5e1b8fe.svg","assets/local-grocery-store.svg"],"assets/local-grocery-store.svg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"react-button/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28421,12 +28425,15 @@ function App() {
     variant: "text"
   }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
     disableShadow: true
-  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, null, "Disable"), /*#__PURE__*/_react.default.createElement(_button.default, {
+  }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
+    disabled: true
+  }, "Disable"), /*#__PURE__*/_react.default.createElement(_button.default, {
+    variant: "text",
     disabled: true
   }, "Disable")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
-    startIcon: ""
+    startIcon: "local_grocery_store"
   }, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
-    endIcon: ""
+    endIcon: "local_grocery_store"
   }, "Default")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_button.default, {
     size: "sm"
   }, "Default"), /*#__PURE__*/_react.default.createElement(_button.default, {
@@ -28484,7 +28491,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57399" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60143" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

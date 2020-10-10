@@ -9,21 +9,21 @@ function App() {
         <Button>Default</Button>
       </div>
       <div>
-        <Button variant="outline" >Default</Button>
+        <Button variant="outline">Default</Button>
       </div>
       <div>
-        <Button variant='text' >Default</Button>
+        <Button variant='text'>Default</Button>
       </div>
       <div>
-        <Button disableShadow >Default</Button>
+        <Button disableShadow>Default</Button>
       </div>
       <div>
-        <Button>Disable</Button>
-        <Button disabled>Disable</Button>
+        <Button disabled = {true}>Disable</Button>
+        <Button variant="text" disabled = {true}>Disable</Button>
       </div>
       <div>
-        <Button startIcon="">Default</Button>
-        <Button endIcon="">Default</Button>
+        <Button startIcon="local_grocery_store">Default</Button>
+        <Button endIcon="local_grocery_store">Default</Button>
       </div>
       <div>
         <Button size='sm' >Default</Button>

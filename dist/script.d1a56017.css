@@ -6,9 +6,10 @@
    border-radius: 6px;
    font-size: 14px;
    border: none;
+   outline: none;
  }
  .default {
-
+  background: rgba(224, 224, 224, 1);
  }
  .outline {
    border:#3D5AFE 1px solid;
@@ -22,7 +23,6 @@
  .disable {
    background-color:rgba(224, 224, 224, 1);
    color :grey;
-    
  }
  .disable {
    color : rgba(158, 158, 158, 1);
@@ -32,7 +32,7 @@
  .disableShadow {
   background: rgba(61, 90, 254, 1);
   color: white;
-  border: none;
+  border-style: solid;
  }
  .sm {
   background: rgba(41, 98, 255, 1);
@@ -56,6 +56,10 @@
   height: 42px;
   color: white;
  }
+ .primary {
+  background: rgba(0, 57, 203, 1);
+  color: white;
+ }
  .secondary {
   background: rgba(69, 90, 100, 1);
   width : 104px;
@@ -67,7 +71,35 @@
   background: rgba(211, 47, 47, 1);
   color: white;
  }
-
-
+ .true {
+   color: rgba(158, 158, 158, 1);
+ }
+ .startIcon {
+  padding-left: 3rem;
+  padding-right: 4rem;
+   background-color: rgba(0, 57, 203, 1);
+   background-image: url(/local-grocery-store.a5e1b8fe.svg);
+   background-repeat: no-repeat;
+   background-size: 1.25rem;
+   background-position: 1rem;
+   color: white;   
+ }
+ .endIcon {
+    padding-right: 6rem;
+    padding-left: 1rem;
+    background-color: rgba(0, 57, 203, 1);
+    background-image: url(/local-grocery-store.a5e1b8fe.svg);
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    background-position: 4.75rem;
+    color: white;
+ }
+ /* svg {
+  width: 70px;
+  height: 70px;
+}
+svg:hover {
+  fill: red;
+} */
 
 /*# sourceMappingURL=/script.d1a56017.css.map */

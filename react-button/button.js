@@ -2,9 +2,22 @@ import React from 'react'
 
 
 function Button(props) {
+
   let buttonStyle = '';
   if (props.color) {
-    buttonStyle = `${props.color} `
+    buttonStyle = `${props.color}`
+  }
+  else if(props.variant && props.disabled) {
+    buttonStyle = `${props.variant} ${props.disabled}`
+  } 
+  else if (props.disableShadow == true) {
+    buttonStyle = 'disableShadow'
+  }
+  else if(props.startIcon) {
+    buttonStyle = 'startIcon'
+  }
+  else  if(props.endIcon) {
+     buttonStyle ='endIcon'
   }
   else if (props.variant) {
     buttonStyle = `${props.variant}`
@@ -12,17 +25,16 @@ function Button(props) {
   else if (props.size) {
     buttonStyle = `${props.size}`
   }
+  else if(props.disabled){
+     buttonStyle = `${props.disabled}`
+  }
   else {
     console.log('no style');
   }
-
-  let condition = true ; 
-  if(condition) {
-    return props.disabled;
-  }
+ 
   return (
-    <button className={buttonStyle} variant={props.variant}>
-      {props.children}
+    <button className={buttonStyle} variant ={props.variant}>
+       {props.children}
     </button>
   )
 }
